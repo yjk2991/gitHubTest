@@ -16,6 +16,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -25,4 +31,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    api project(':testlibrary')
+//    implementation(name:'testlibrary-release', ext:'aar')
 }
+
+
+
+
+
